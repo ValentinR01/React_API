@@ -13,18 +13,17 @@ services:
     db:
         image: 'mariadb'
         restart: always
-        environment:
-            MYSQL_DATABASE: data
-            MYSQL_ROOT_PASSWORD: password
-#        volumes:
-#            # Pour lancer un dump automatiquement au montage du conteneur
-#            - ./database/dump.sql:/docker-entrypoint-initdb.d/dump.sql
-
-
+        volumes:
+           - ./dump.sql:/docker-entrypoint-initdb.d/dump.sql
+        env_file:
+            - app/back-end/var/.env
+    
     phpmyadmin:
         image: phpmyadmin
         restart: always
         ports:
             - '8080:80'
         environment:
-            - PMA_ARBITRARY=1
+            - PMA_ARBITRARY=1 
+
+    
