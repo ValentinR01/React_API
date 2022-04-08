@@ -1,0 +1,15 @@
+{
+    "name": "valentinrejaunier/back-end",
+    "autoload": {
+        "psr-4": {
+            "Valentinrejaunier\\BackEnd\\": "src/"
+        }
+    },
+    "authors": [
+        {
+            "name": "ValentinR01",
+            "email": "vale.vr@icloud.com"
+        }
+    ],
+    "require": {}
+}
