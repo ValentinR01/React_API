@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="utf-8" ?>
+
+<routes>
+    <route path="login" action="login" controller="SecurityController"></route>
+    <route path="c" action="access" controller="SecurityController"></route>
+    <route path="post" action="post" controller="PostController" params="id"/>
+    <route path="createaccount" action="create" controller="SecurityController"></route>
+    <route path="executeaccount" action="member" controller="SecurityController"></route>
+    <route path="logout" action="logout" controller="SecurityController"></route>
+
+
+    <route path="write" action="create" controller="PostController" />
+    <route path="add" action="add" controller="PostController" params="title,content,userId"/>
+    <route path="delete" action="delete" controller="PostController" params="id"/>
+    <route path="edit" action="edit" controller="PostController" params="id" />
+    <route path="modify" action="modify" controller="PostController" params="id,title,content,userId" />
+
+    <!-- FOR API PURPOSE -->
+    <route path="posts" controller="PostController" action="postsApi" params="id,number"></route>
+    <route path="comments" controller="CommentController" action="commentsApi" params="id,mainId"></route>
+
+    <!--<route path="edit" action="modify" controller="PostController" params="id, title, content" />-->
+    <!--<route path="author" action="author" controller="PostController"/>-->
+
+    <route path="posts"  controller="PostController" action="postsApi" params="id,number"/>
+
+</routes>
